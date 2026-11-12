@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="opt1-grad-a" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366f1" />
+      <stop offset="50%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#d946ef" />
+    </linearGradient>
+    <linearGradient id="opt1-grad-b" x1="100" y1="20" x2="20" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="opt1-grad-accent" x1="40" y1="30" x2="90" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+    <filter id="opt1-glow" x="-20%" y="-20%" width="140%" height="140%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow for dark surfaces -->
+  <circle cx="60" cy="60" r="42" fill="url(#opt1-grad-a)" opacity="0.18" filter="url(#opt1-glow)" />
+
+  <!-- Isometric Hexagon Frame & Interlocking BY Form -->
+  <!-- Left Vertical Spine (Backbone of B) -->
+  <path d="M34 26C34 23.7909 35.7909 22 38 22H46C48.2091 22 50 23.7909 50 26V94C50 96.2091 48.2091 98 46 98H38C35.7909 98 34 96.2091 34 94V26Z" fill="url(#opt1-grad-a)" />
+
+  <!-- Top Loop / Upper Facet of B -->
+  <path d="M50 24H72C81.9411 24 90 32.0589 90 42C90 51.9411 81.9411 60 72 60H50V46H70C72.2091 46 74 44.2091 74 42C74 39.7909 72.2091 38 70 38H50V24Z" fill="url(#opt1-grad-a)" />
+
+  <!-- Dynamic Y-Prism Diagonal Stem Intersecting Lower Loop -->
+  <path d="M50 56H76C86.4934 56 95 64.5066 95 75C95 85.4934 86.4934 94 76 94H50V80H74C76.7614 80 79 77.7614 79 75C79 72.2386 76.7614 70 74 70H50V56Z" fill="url(#opt1-grad-b)" />
+
+  <!-- Isometric Y Wing Accent / Cyber Cut -->
+  <path d="M68 46L86 28C87.5621 26.4379 90.0948 26.4379 91.6569 28L94 30.3431C95.5621 31.9052 95.5621 34.4379 94 36L78 52L68 46Z" fill="url(#opt1-grad-accent)" opacity="0.95" />
+
+  <!-- Central Core Hex Sparkle -->
+  <polygon points="60,54 64,58 60,62 56,58" fill="#ffffff" />
+</svg>

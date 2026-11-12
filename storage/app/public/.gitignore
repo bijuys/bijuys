@@ -1,0 +1,9 @@
+*
+!.gitignore
+!bio/
+!bio/*
+!posts/
+!posts/*
+!projects/
+!projects/*
+

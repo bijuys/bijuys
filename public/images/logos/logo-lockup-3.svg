@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
+  <defs>
+    <linearGradient id="l3-grad" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="l3-text-grad" x1="64" y1="0" x2="220" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Scaled Mark -->
+  <g transform="translate(6, 8) scale(0.4)">
+    <path d="M42 22C42 19.7909 40.2091 18 38 18C35.7909 18 34 19.7909 34 22V98C34 100.209 35.7909 102 38 102C40.2091 102 42 100.209 42 98V64L54 58L42 52V22Z" fill="url(#l3-grad)" />
+    <path d="M42 26H68C77.3888 26 85 33.6112 85 43C85 52.3888 77.3888 60 68 60H42" stroke="url(#l3-grad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M42 60H72C82.4934 60 91 68.5066 91 79C91 89.4934 82.4934 98 72 98H42" stroke="url(#l3-grad)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+    <path d="M54 78L78 44" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+    <path d="M96 24C96 28 92 32 88 32C92 32 96 36 96 40C96 36 100 32 104 32C100 32 96 28 96 24Z" fill="#38bdf8" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="64" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="28" font-weight="800" letter-spacing="-0.03em" fill="url(#l3-text-grad)">Bijuys</text>
+  <circle cx="162" cy="38" r="3" fill="#10b981" />
+</svg>

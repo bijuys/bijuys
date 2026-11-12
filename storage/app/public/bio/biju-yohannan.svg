@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" fill="none">
+  <defs>
+    <!-- Background Radial Glow -->
+    <radialGradient id="bio-bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="60%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <!-- Vibrant Studio Lighting Aura -->
+    <linearGradient id="bio-aura" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.6" />
+    </linearGradient>
+
+    <!-- Skin Tone & Facial Shadow -->
+    <linearGradient id="bio-skin" x1="160" y1="120" x2="240" y2="240" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f8d7b8" />
+      <stop offset="50%" stop-color="#e8b990" />
+      <stop offset="100%" stop-color="#c9956d" />
+    </linearGradient>
+
+    <linearGradient id="bio-hair" x1="150" y1="70" x2="250" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2d3748" />
+      <stop offset="100%" stop-color="#1a202c" />
+    </linearGradient>
+
+    <!-- Modern Dark Minimalist Tech Attire -->
+    <linearGradient id="bio-jacket" x1="100" y1="260" x2="300" y2="390" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+
+    <!-- Glass Rim Glow -->
+    <filter id="bio-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="400" height="400" rx="36" fill="url(#bio-bg)" />
+
+  <!-- Studio Halo Ring -->
+  <circle cx="200" cy="180" r="140" stroke="url(#bio-aura)" stroke-width="3" opacity="0.4" />
+  <circle cx="200" cy="180" r="115" fill="url(#bio-aura)" opacity="0.15" filter="url(#bio-glow)" />
+
+  <!-- Shoulders & Apparel -->
+  <!-- Inner Henley / T-shirt -->
+  <path d="M165 260 L200 295 L235 260 L255 380 L145 380 Z" fill="#334155" />
+  
+  <!-- Outer Tech Jacket / Blazer -->
+  <path d="M110 380 C115 310 140 265 170 255 L200 285 L230 255 C260 265 285 310 290 380 Z" fill="url(#bio-jacket)" stroke="#475569" stroke-width="1.5" />
+  
+  <!-- Left Collar Lapel -->
+  <path d="M165 255 L188 320 L168 335 L145 275 Z" fill="#1e293b" />
+  <!-- Right Collar Lapel -->
+  <path d="M235 255 L212 320 L232 335 L255 275 Z" fill="#1e293b" />
+
+  <!-- Neck -->
+  <path d="M178 215 C178 245 186 268 200 268 C214 268 222 245 222 215 Z" fill="#d99f75" />
+  <path d="M182 228 C192 238 208 238 218 228 L220 248 C210 256 190 256 180 248 Z" fill="#bf855b" opacity="0.6" />
+
+  <!-- Head Base & Ears -->
+  <!-- Left Ear -->
+  <ellipse cx="140" cy="180" rx="9" ry="16" fill="#e8b990" />
+  <!-- Right Ear -->
+  <ellipse cx="260" cy="180" rx="9" ry="16" fill="#e8b990" />
+
+  <!-- Face / Jaw Shape -->
+  <path d="M148 150 C148 100 252 100 252 150 C252 205 235 235 200 235 C165 235 148 205 148 150 Z" fill="url(#bio-skin)" />
+
+  <!-- Stylish Modern Hair -->
+  <path d="M142 145 C138 105 160 75 200 75 C242 75 264 105 258 145 C252 135 245 118 230 115 C215 112 185 110 165 125 C150 135 145 142 142 145 Z" fill="url(#bio-hair)" />
+
+  <!-- Well-Groomed Modern Beard & Mustache -->
+  <path d="M152 178 C152 218 170 236 200 236 C230 236 248 218 248 178 C242 195 230 216 200 216 C170 216 158 195 152 178 Z" fill="#242c38" />
+  <!-- Mustache -->
+  <path d="M182 192 C192 188 208 188 218 192 C210 198 190 198 182 192 Z" fill="#1a202c" />
+
+  <!-- Eyes & Eyebrows -->
+  <path d="M165 142 C172 138 182 138 188 142" stroke="#1e293b" stroke-width="3" stroke-linecap="round" />
+  <path d="M212 142 C218 138 228 138 235 142" stroke="#1e293b" stroke-width="3" stroke-linecap="round" />
+  <circle cx="176" cy="152" r="3.5" fill="#1e293b" />
+  <circle cx="224" cy="152" r="3.5" fill="#1e293b" />
+  <circle cx="178" cy="150" r="1.2" fill="#ffffff" />
+  <circle cx="226" cy="150" r="1.2" fill="#ffffff" />
+
+  <!-- Nose -->
+  <path d="M198 150 L195 174 L204 174" stroke="#c9956d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Sleek Modern Designer Glasses -->
+  <rect x="156" y="138" width="36" height="26" rx="7" fill="none" stroke="#6366f1" stroke-width="2.5" />
+  <rect x="208" y="138" width="36" height="26" rx="7" fill="none" stroke="#6366f1" stroke-width="2.5" />
+  <line x1="192" y1="148" x2="208" y2="148" stroke="#6366f1" stroke-width="2.5" />
+  <!-- Glasses Rim Reflection -->
+  <line x1="162" y1="144" x2="174" y2="144" stroke="#ffffff" stroke-width="1.5" opacity="0.7" stroke-linecap="round" />
+  <line x1="214" y1="144" x2="226" y2="144" stroke="#ffffff" stroke-width="1.5" opacity="0.7" stroke-linecap="round" />
+
+  <!-- Warm Confident Smile -->
+  <path d="M188 202 C194 207 206 207 212 202" stroke="#8c4b2a" stroke-width="2.2" stroke-linecap="round" />
+
+  <!-- Interactive Tech Badge in Corner -->
+  <g transform="translate(295, 295)">
+    <rect width="70" height="70" rx="20" fill="#0f172a" stroke="#6366f1" stroke-width="2" />
+    <path d="M35 15 C24 15 20 22 20 28 C20 34 25 38 31 38 C37 38 42 42 42 48 C42 54 36 60 26 60" 
+          stroke="url(#bio-aura)" stroke-width="5" stroke-linecap="round" />
+    <circle cx="50" cy="22" r="3" fill="#00f2fe" />
+  </g>
+
+  <!-- Luminous Vignette Border -->
+  <rect x="2" y="2" width="396" height="396" rx="34" stroke="url(#bio-aura)" stroke-width="2" opacity="0.3" />
+</svg>

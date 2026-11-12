@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 64" fill="none">
+  <defs>
+    <linearGradient id="l4-plate" x1="0" y1="0" x2="60" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="l4-mark" x1="14" y1="12" x2="47" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="45%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+    <linearGradient id="l4-text-grad" x1="64" y1="0" x2="220" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Scaled Mark -->
+  <g transform="translate(6, 8) scale(0.4)">
+    <rect x="12" y="12" width="96" height="96" rx="28" fill="url(#l4-plate)" stroke="rgba(255,255,255,0.2)" stroke-width="2" />
+    <path d="M38 34C38 31.7909 39.7909 30 42 30H48C50.2091 30 52 31.7909 52 34V86C52 88.2091 50.2091 90 48 90H42C39.7909 90 38 88.2091 38 86V34Z" fill="url(#l4-mark)" />
+    <path d="M52 32H67C74.732 32 81 38.268 81 46C81 53.732 74.732 60 67 60H52V49H65C66.6569 49 68 47.6569 68 46C68 44.3431 66.6569 43 65 43H52V32Z" fill="url(#l4-mark)" />
+    <path d="M52 58H71C79.2843 58 86 64.7157 86 73C86 81.2843 79.2843 88 71 88H52V77H69C71.2091 77 73 75.2091 73 73C73 70.7909 71.2091 69 69 69H52V58Z" fill="url(#l4-mark)" />
+    <path d="M60 48L79 72H69L56 55L60 48Z" fill="#ffffff" opacity="0.9" />
+    <circle cx="79" cy="36" r="3.5" fill="#f43f5e" />
+  </g>
+
+  <!-- Brand Typography -->
+  <text x="64" y="42" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Inter', sans-serif" font-size="28" font-weight="800" letter-spacing="-0.03em" fill="url(#l4-text-grad)">Bijuys</text>
+  <circle cx="162" cy="38" r="3" fill="#f43f5e" />
+</svg>

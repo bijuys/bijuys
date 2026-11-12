@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="opt3-grad-bracket" x1="20" y1="20" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="opt3-grad-spark" x1="80" y1="15" x2="110" y2="45" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="opt3-glow" x="-30%" y="-30%" width="160%" height="160%" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Glow -->
+  <circle cx="60" cy="60" r="44" fill="#38bdf8" opacity="0.10" filter="blur(14px)" />
+
+  <!-- The Code Bracket `<` Stem & Vertical Anchor -->
+  <path d="M42 22C42 19.7909 40.2091 18 38 18C35.7909 18 34 19.7909 34 22V98C34 100.209 35.7909 102 38 102C40.2091 102 42 100.209 42 98V64L54 58L42 52V22Z" 
+        fill="url(#opt3-grad-bracket)" />
+
+  <!-- Developer Code Chevrons into Monogram B -->
+  <!-- Top Segment (Upper Loop) -->
+  <path d="M42 26H68C77.3888 26 85 33.6112 85 43C85 52.3888 77.3888 60 68 60H42" 
+        stroke="url(#opt3-grad-bracket)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Bottom Segment (Lower Loop with Y Diagonal Anchor) -->
+  <path d="M42 60H72C82.4934 60 91 68.5066 91 79C91 89.4934 82.4934 98 72 98H42" 
+        stroke="url(#opt3-grad-bracket)" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" />
+
+  <!-- Inner Code Slash Element (The dynamic stem of Y) -->
+  <path d="M54 78L78 44" stroke="#38bdf8" stroke-width="6" stroke-linecap="round" opacity="0.85" />
+
+  <!-- Code Spark / Star of Innovation at Top Right -->
+  <path d="M96 24C96 28 92 32 88 32C92 32 96 36 96 40C96 36 100 32 104 32C100 32 96 28 96 24Z" 
+        fill="url(#opt3-grad-spark)" filter="url(#opt3-glow)" />
+  <circle cx="96" cy="32" r="1.5" fill="#ffffff" />
+</svg>

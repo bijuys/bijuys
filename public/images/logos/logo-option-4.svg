@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <!-- Background Plate Gradient -->
+    <linearGradient id="opt4-plate-grad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1e1b4b" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Vibrant Brand Stroke Gradient -->
+    <linearGradient id="opt4-mark-grad" x1="28" y1="24" x2="94" y2="96" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f43f5e" />
+      <stop offset="45%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#6366f1" />
+    </linearGradient>
+
+    <!-- Glass Rim Highlight -->
+    <linearGradient id="opt4-rim-grad" x1="20" y1="10" x2="100" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+
+    <filter id="opt4-shadow" x="-10%" y="-10%" width="120%" height="130%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#a855f7" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="60" cy="60" r="48" fill="#a855f7" opacity="0.20" filter="blur(16px)" />
+
+  <!-- Outer Squircle Badge Container -->
+  <rect x="12" y="12" width="96" height="96" rx="28" fill="url(#opt4-plate-grad)" filter="url(#opt4-shadow)" />
+  <rect x="12.5" y="12.5" width="95" height="95" rx="27.5" stroke="url(#opt4-rim-grad)" stroke-width="1.5" />
+
+  <!-- Monogram Mark BY Inside -->
+  <!-- Left Pillar of B -->
+  <path d="M38 34C38 31.7909 39.7909 30 42 30H48C50.2091 30 52 31.7909 52 34V86C52 88.2091 50.2091 90 48 90H42C39.7909 90 38 88.2091 38 86V34Z" fill="url(#opt4-mark-grad)" />
+
+  <!-- Upper Loop of B -->
+  <path d="M52 32H67C74.732 32 81 38.268 81 46C81 53.732 74.732 60 67 60H52V49H65C66.6569 49 68 47.6569 68 46C68 44.3431 66.6569 43 65 43H52V32Z" fill="url(#opt4-mark-grad)" />
+
+  <!-- Lower Loop of B with Integrated Y Leg -->
+  <path d="M52 58H71C79.2843 58 86 64.7157 86 73C86 81.2843 79.2843 88 71 88H52V77H69C71.2091 77 73 75.2091 73 73C73 70.7909 71.2091 69 69 69H52V58Z" fill="url(#opt4-mark-grad)" />
+
+  <!-- Y Diagonal Flare -->
+  <path d="M60 48L79 72H69L56 55L60 48Z" fill="#ffffff" opacity="0.9" />
+
+  <!-- Crisp Modern Dot / Node Accent -->
+  <circle cx="79" cy="36" r="3.5" fill="#f43f5e" />
+</svg>

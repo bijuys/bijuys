@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bijuys &bull; Brand Identity & Logo Options Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary: #0a0d14;
+      --bg-card: rgba(18, 24, 38, 0.85);
+      --bg-card-subtle: rgba(255, 255, 255, 0.03);
+      --border-color: rgba(255, 255, 255, 0.1);
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-muted: #64748b;
+      --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #06b6d4 100%);
+      --accent-glow: rgba(99, 102, 241, 0.25);
+    }
+
+    [data-theme="light"] {
+      --bg-primary: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-card-subtle: #f1f5f9;
+      --border-color: #e2e8f0;
+      --text-primary: #0f172a;
+      --text-secondary: #475569;
+      --text-muted: #94a3b8;
+      --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #0284c7 100%);
+      --accent-glow: rgba(79, 70, 229, 0.15);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      line-height: 1.6;
+      transition: background-color 0.25s ease, color 0.25s ease;
+      padding-bottom: 5rem;
+    }
+
+    .container {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Top Nav */
+    .top-bar {
+      border-bottom: 1px solid var(--border-color);
+      padding: 1rem 0;
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-card);
+    }
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .brand-title span {
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      font-weight: 700;
+      margin-left: 0.75rem;
+    }
+
+    .theme-toggle-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .theme-toggle-btn:hover {
+      border-color: #818cf8;
+      transform: translateY(-1px);
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 0 2.5rem;
+    }
+    .hero h1 {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+    }
+    .hero-info-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.25);
+      color: #10b981;
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    /* Grid of Options */
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    @media (max-width: 900px) {
+      .options-grid { grid-template-columns: 1fr; }
+    }
+
+    .option-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      transition: all 0.25s ease;
+    }
+    .option-card:hover {
+      border-color: #6366f1;
+      box-shadow: 0 15px 40px var(--accent-glow);
+      transform: translateY(-3px);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+    }
+    .option-pill {
+      font-size: 0.75rem;
+      font-weight: 800;
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      background: #4f46e5;
+      color: #ffffff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .option-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-top: 0.35rem;
+      letter-spacing: -0.02em;
+    }
+    .option-subtitle {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Logo Canvas Stage */
+    .logo-stage {
+      background: var(--bg-card-subtle);
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+      padding: 2.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .main-mark-wrap {
+      width: 110px;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 10px 20px rgba(0,0,0,0.2));
+    }
+    .main-mark-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .lockup-wrap {
+      width: 220px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lockup-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    /* Context Mini Mockups */
+    .mockup-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .mockup-box {
+      background: var(--bg-card-subtle);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .mockup-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+    .mockup-preview {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.25rem;
+    }
+    .mockup-preview img {
+      width: 24px;
+      height: 24px;
+    }
+    .mockup-preview span {
+      font-size: 0.95rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    /* Design Details */
+    .design-specs {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+    .design-specs p {
+      margin-bottom: 0.75rem;
+    }
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+    }
+    .features-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .features-list li::before {
+      content: "✓";
+      color: #10b981;
+      font-weight: bold;
+    }
+
+    /* Action bar */
+    .card-footer {
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .select-btn {
+      background: var(--accent-gradient);
+      color: #ffffff;
+      border: none;
+      padding: 0.65rem 1.25rem;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.875rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .select-btn:hover {
+      opacity: 0.92;
+      transform: translateY(-1px);
+    }
+    .option-id {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Comparison Bar */
+    .compare-section {
+      margin-top: 4rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 2.5rem;
+    }
+    .compare-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+      text-align: center;
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+    }
+    .compare-table th, .compare-table td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .compare-table th {
+      color: var(--text-muted);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+    }
+    .compare-table tr:hover td {
+      background: var(--bg-card-subtle);
+    }
+
+    .modal-banner {
+      margin-top: 2.5rem;
+      text-align: center;
+      background: rgba(99, 102, 241, 0.08);
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      border-radius: 12px;
+      padding: 1.5rem;
+    }
+    .modal-banner h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .modal-banner p {
+      color: var(--text-secondary);
+      font-size: 0.925rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div style="display: flex; align-items: center;">
+        <div class="brand-title"><span>Bijuys</span> Studio</div>
+        <span class="badge">Identity Showcase</span>
+      </div>
+
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="/" style="color: var(--text-secondary); text-decoration: none; font-size: 0.875rem; font-weight: 600;">&larr; Back to Website</a>
+        <button class="theme-toggle-btn" id="theme-btn" type="button">
+          <span id="theme-btn-icon">&#9788;</span>
+          <span id="theme-btn-text">Light Mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-info-tag">
+      <span>&#10003;</span> Name Spacing Fixed: Unified as "Bijuys"
+    </div>
+    <h1 style="margin-top: 1rem;">Choose Your Official Logo</h1>
+    <p>
+      Explore 4 bespoke, modern visual identities crafted specifically for <strong>Bijuys</strong> (Biju Yohannan). 
+      Review their geometry, test them in light & dark modes, and pick your favorite.
+    </p>
+  </section>
+
+  <!-- Options Grid -->
+  <main class="container">
+    <div class="options-grid">
+
+      <!-- OPTION 1 -->
+      <article class="option-card" id="card-option-1">
+        <div class="card-header">
+          <div>
+            <span class="option-pill">Option 01</span>
+            <h2 class="option-title">The Hexa-Prism Monogram</h2>
+            <div class="option-subtitle">Architectural &bull; 3D Isometric BY Fusion</div>
+          </div>
+        </div>
+
+        <div class="logo-stage">
+          <div class="main-mark-wrap">
+            <img src="/images/logos/logo-option-1.svg" alt="Option 1 Hexa-Prism Monogram Mark">
+          </div>
+          <div class="lockup-wrap">
+            <img src="/images/logos/logo-lockup-1.svg" alt="Option 1 Full Lockup with Bijuys typography">
+          </div>
+        </div>
+
+        <div class="mockup-row">
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Header Nav (40px)</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-1.svg" alt="Header Nav">
+                <span>Bijuys</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Favicon / App Icon</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-1.svg" alt="Favicon" style="width: 20px; height: 20px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Bijuys | Portfolio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-specs">
+          <p>
+            An isometric tech prism uniting the letters <strong>B</strong> and <strong>Y</strong> into a dynamic structural entity. Represents full-stack architectural mastery, multi-dimensional thinking, and high-performance engineering.
+          </p>
+          <ul class="features-list">
+            <li>Interlocking electric indigo, royal purple, and cyan cyber-wing</li>
+            <li>Center diamond spark representing precision craftsmanship</li>
+            <li>Exceptional visual depth and futuristic presence</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <span class="option-id">ID: OPTION-01</span>
+          <button class="select-btn" onclick="copyChoice('Option 1 (Hexa-Prism Monogram)')">
+            <span>Select Option 1</span> &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- OPTION 2 -->
+      <article class="option-card" id="card-option-2">
+        <div class="card-header">
+          <div>
+            <span class="option-pill" style="background: #0284c7;">Option 02</span>
+            <h2 class="option-title">The Infinity Node & Flow</h2>
+            <div class="option-subtitle">Continuous Loop &bull; Dynamic Agile Ribbon</div>
+          </div>
+        </div>
+
+        <div class="logo-stage">
+          <div class="main-mark-wrap">
+            <img src="/images/logos/logo-option-2.svg" alt="Option 2 Infinity Node Mark">
+          </div>
+          <div class="lockup-wrap">
+            <img src="/images/logos/logo-lockup-2.svg" alt="Option 2 Full Lockup">
+          </div>
+        </div>
+
+        <div class="mockup-row">
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Header Nav (40px)</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-2.svg" alt="Header Nav">
+                <span>Bijuys</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Favicon / App Icon</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-2.svg" alt="Favicon" style="width: 20px; height: 20px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Bijuys | Portfolio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-specs">
+          <p>
+            A seamless mobius loop forming an open, flowing <strong>B</strong> whose lower stroke extends into a directional <strong>Y</strong> stem. Embodies frictionless delivery, continuous iteration, and modern developer synergy.
+          </p>
+          <ul class="features-list">
+            <li>Vivid cyan-to-sapphire gradient with purple node convergence</li>
+            <li>Smooth organic geometry that feels approachable and ultra-modern</li>
+            <li>Flawlessly legible down to 16px favicon scale</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <span class="option-id">ID: OPTION-02</span>
+          <button class="select-btn" style="background: linear-gradient(135deg, #0284c7, #6366f1);" onclick="copyChoice('Option 2 (Infinity Node & Flow)')">
+            <span>Select Option 2</span> &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- OPTION 3 -->
+      <article class="option-card" id="card-option-3">
+        <div class="card-header">
+          <div>
+            <span class="option-pill" style="background: #059669;">Option 03</span>
+            <h2 class="option-title">Code Craft & Nova Spark</h2>
+            <div class="option-subtitle">Developer Brackets &bull; Terminal Chevron & B</div>
+          </div>
+        </div>
+
+        <div class="logo-stage">
+          <div class="main-mark-wrap">
+            <img src="/images/logos/logo-option-3.svg" alt="Option 3 Code Craft Mark">
+          </div>
+          <div class="lockup-wrap">
+            <img src="/images/logos/logo-lockup-3.svg" alt="Option 3 Full Lockup">
+          </div>
+        </div>
+
+        <div class="mockup-row">
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Header Nav (40px)</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-3.svg" alt="Header Nav">
+                <span>Bijuys</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Favicon / App Icon</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-3.svg" alt="Favicon" style="width: 20px; height: 20px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Bijuys | Portfolio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-specs">
+          <p>
+            Crafted for pure engineering excellence. Features terminal bracket chevrons <code>&lt; / &gt;</code> seamlessly morphed into a solid monogram <strong>B</strong> with an integrated code-slash <strong>Y</strong> and four-point innovation star.
+          </p>
+          <ul class="features-list">
+            <li>Neon cyan and vibrant emerald green gradient palette</li>
+            <li>Direct homage to code syntax, algorithms, and engineering craft</li>
+            <li>Sharp, crisp geometry with magnetic tech appeal</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <span class="option-id">ID: OPTION-03</span>
+          <button class="select-btn" style="background: linear-gradient(135deg, #0284c7, #10b981);" onclick="copyChoice('Option 3 (Code Craft & Nova Spark)')">
+            <span>Select Option 3</span> &rarr;
+          </button>
+        </div>
+      </article>
+
+      <!-- OPTION 4 -->
+      <article class="option-card" id="card-option-4">
+        <div class="card-header">
+          <div>
+            <span class="option-pill" style="background: #db2777;">Option 04</span>
+            <h2 class="option-title">The Minimalist Shield Monogram</h2>
+            <div class="option-subtitle">Executive Squircle &bull; Luxury Tech Identity</div>
+          </div>
+        </div>
+
+        <div class="logo-stage">
+          <div class="main-mark-wrap">
+            <img src="/images/logos/logo-option-4.svg" alt="Option 4 Minimalist Shield Mark">
+          </div>
+          <div class="lockup-wrap">
+            <img src="/images/logos/logo-lockup-4.svg" alt="Option 4 Full Lockup">
+          </div>
+        </div>
+
+        <div class="mockup-row">
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Header Nav (40px)</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-4.svg" alt="Header Nav">
+                <span>Bijuys</span>
+              </div>
+            </div>
+          </div>
+          <div class="mockup-box">
+            <div>
+              <div class="mockup-label">Favicon / App Icon</div>
+              <div class="mockup-preview">
+                <img src="/images/logos/logo-option-4.svg" alt="Favicon" style="width: 20px; height: 20px;">
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Bijuys | Portfolio</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="design-specs">
+          <p>
+            An executive squircle container (Apple/Stripe aesthetic) with laser-cut geometric negative space revealing the monogram <strong>BY</strong> and a dynamic white flare. Radiates leadership, authority, and high-end elegance.
+          </p>
+          <ul class="features-list">
+            <li>Sunset magenta, radiant purple, and obsidian glassmorphic plate</li>
+            <li>Standout app icon badge ready for mobile, macOS dock, and web</li>
+            <li>Bold contrast that pops against light and dark backgrounds</li>
+          </ul>
+        </div>
+
+        <div class="card-footer">
+          <span class="option-id">ID: OPTION-04</span>
+          <button class="select-btn" style="background: linear-gradient(135deg, #f43f5e, #8b5cf6);" onclick="copyChoice('Option 4 (The Minimalist Shield Monogram)')">
+            <span>Select Option 4</span> &rarr;
+          </button>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Comparison Summary Section -->
+    <section class="compare-section">
+      <h2 class="compare-title">Quick Attribute Comparison</h2>
+      <div style="overflow-x: auto;">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th>Concept</th>
+              <th>Primary Colors</th>
+              <th>Vibe & Personality</th>
+              <th>Best Suited For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Option 01</strong></td>
+              <td>Hexa-Prism (Isometric BY)</td>
+              <td>Indigo, Electric Violet, Cyan</td>
+              <td>Futuristic, 3D Architectural, High-Tech</td>
+              <td>Cloud Systems, Complex Architectures, Modern Web</td>
+            </tr>
+            <tr>
+              <td><strong>Option 02</strong></td>
+              <td>Infinity Node & Flow</td>
+              <td>Cyan, Sky Blue, Royal Purple</td>
+              <td>Continuous Flow, Friendly, Sleek, Fluid</td>
+              <td>Full-Stack Engineering, Agile Product Development</td>
+            </tr>
+            <tr>
+              <td><strong>Option 03</strong></td>
+              <td>Code Craft & Nova Spark</td>
+              <td>Emerald Green, Electric Blue, Cyan</td>
+              <td>Developer-First, Algorithmic, Precise</td>
+              <td>Software Engineering, Open Source, Clean Code</td>
+            </tr>
+            <tr>
+              <td><strong>Option 04</strong></td>
+              <td>Minimalist Shield Squircle</td>
+              <td>Sunset Rose, Deep Violet, Obsidian</td>
+              <td>Executive, Luxury Tech, Iconic App Icon</td>
+              <td>Founder / Tech Lead, SaaS Brand, Premium Consulting</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-banner">
+        <h3>How to Confirm Your Choice</h3>
+        <p>
+          Simply tell me in chat: <strong>"I choose Option 1"</strong> (or 2, 3, 4).<br>
+          Once you confirm, I will automatically deploy the chosen logo across the entire site — updating the header navigation, footer, admin sidebar, login screen, and favicon!
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const themeBtn = document.getElementById('theme-btn');
+    const themeIcon = document.getElementById('theme-btn-icon');
+    const themeText = document.getElementById('theme-btn-text');
+
+    function setTheme(theme) {
+      document.documentElement.setAttribute('data-theme', theme);
+      if (theme === 'light') {
+        themeIcon.innerHTML = '&#9790;';
+        themeText.textContent = 'Dark Mode';
+      } else {
+        themeIcon.innerHTML = '&#9788;';
+        themeText.textContent = 'Light Mode';
+      }
+    }
+
+    themeBtn.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'light' ? 'dark' : 'light';
+      setTheme(next);
+    });
+
+    function copyChoice(name) {
+      alert('You selected: ' + name + '!\n\nPlease return to our chat and let me know your choice, and I will instantly apply it across your entire website and admin portal.');
+    }
+  </script>
+</body>
+</html>
